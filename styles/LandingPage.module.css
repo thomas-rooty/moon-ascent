@@ -6,3 +6,36 @@
   height: 100vh;
   width: 100vw;
 }
+
+.range {
+  position: absolute;
+  bottom: 120px;
+  left: -80px;
+  transform: rotate(-90deg);
+}
+
+.range input{
+  -webkit-appearance:none;
+  width:200px;
+  height:4px;
+  border-radius:5px;
+  background-color:#16191c;
+  outline:none;
+}
+
+.range input::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background-color:#404b4f;
+  border: #16191c 3px solid;
+  cursor:pointer;
+  transition: .3s;
+}
+
+.range input::-webkit-slider-thumb:hover{
+  transform: scale(1.4);
+  background-color: #556169;
+  border: #21252a 3px solid;
+}

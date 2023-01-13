@@ -1,0 +1,58 @@
+.audioModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: black;
+  z-index: 1000;
+  font-family: 'Cinzel', serif;
+  transition: 3s;
+}
+
+.modalContent > h1 {
+  font-size: 20px;
+}
+
+.modalContent > p {
+  font-size: 15px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.modalButtons > button {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #fff;
+  background: black;
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.darken {
+  opacity: 0;
+}
+
+.modalButtons > button:hover {
+  background: #000;
+  opacity: 1;
+}

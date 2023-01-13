@@ -21,7 +21,7 @@
   position: relative;
   z-index: 0;
   opacity: .5;
-  transition: 1s;
+  transition: .3s;
 }
 
 .start::before, .start::after {
@@ -64,4 +64,8 @@
 .start:hover {
   background: #000;
   opacity: 1;
+}
+
+.start:active {
+  transform: scale(0.95);
 }

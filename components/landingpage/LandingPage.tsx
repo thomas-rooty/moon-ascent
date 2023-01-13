@@ -16,7 +16,7 @@ const LandingPage = () => {
   useEffect(() => {
     if (audioState) {
       // Play audio from audio element
-      const audio = document.getElementById('audio') as HTMLAudioElement
+      const audio = document.getElementById('bg-audio') as HTMLAudioElement
       audio.volume = audioVolume
       audio.play()
     }
@@ -24,7 +24,8 @@ const LandingPage = () => {
 
   return (
     <div className={styles.container}>
-      <audio id="audio" src="/musics/The Rising Dawn Bellows Like Thunder.mp3" loop preload="auto"/>
+      <audio id="bg-audio" src="/musics/The Rising Dawn Bellows Like Thunder.mp3" loop preload="auto"/>
+      <audio id="ascent-audio" src="/musics/Man to the Moon.mp3" loop preload="auto"/>
       <AudioModal/>
       <StartButton/>
       <div className={styles.range}>

@@ -36,6 +36,6 @@
 
 .range input::-webkit-slider-thumb:hover{
   transform: scale(1.4);
-  background-color: #556169;
-  border: #21252a 3px solid;
+  background-color: #6a7983;
+  border: #363c44 3px solid;
 }

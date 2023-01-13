@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../public/fonts/Cinzel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.start {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #eee;
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  opacity: .5;
+  transition: 1s;
+}
+
+.start::before, .start::after {
+  position: absolute;
+  background: #000000;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.start::before {
+  height: 50px;
+  width: 230px;
+}
+
+.start::after {
+  width: 250px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.start:hover::before {
+  width: 0;
+  background: #000;
+}
+
+.start:hover::after {
+  height: 0;
+  background: #000;
+}
+
+.start:hover {
+  background: #000;
+  opacity: 1;
+}

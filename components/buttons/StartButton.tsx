@@ -13,22 +13,28 @@ const StartButton = () => {
   useEffect(() => {
     if (startedJourney) {
       console.log('Started Journey')
+      // Add hide class to the start button and remove it from the DOM after .5 second
+      document.getElementsByClassName(styles.start)[0].classList.add(styles.hide)
+      setTimeout(() => {
+        document.getElementsByClassName(styles.start)[0].remove()
+      }, 1000)
+
+      // Music handler
       if (audioState) {
         // Fade out progressively active background music from element called bg-audio
-        const audio = document.getElementById('bg-audio') as HTMLAudioElement
+        const bgAudio = document.getElementById('bg-audio') as HTMLAudioElement
         const fadeAudio = setInterval(() => {
-          if (audio.volume > 0.1) {
-            audio.volume -= 0.1
+          if (bgAudio.volume > 0.05) {
+            bgAudio.volume -= 0.01
           } else {
-            audio.pause()
+            bgAudio.pause()
             clearInterval(fadeAudio)
+            // Play audio from element called ascent-audio
+            const ascentAudio = document.getElementById('ascent-audio') as HTMLAudioElement
+            ascentAudio.volume = audioVolume
+            ascentAudio.play()
           }
         }, 100)
-
-        // Play audio from element called ascent-audio
-        const ascentAudio = document.getElementById('ascent-audio') as HTMLAudioElement
-        ascentAudio.volume = audioVolume
-        ascentAudio.play()
       }
     }
   }, [audioState, audioVolume, startedJourney])

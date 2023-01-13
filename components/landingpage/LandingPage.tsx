@@ -28,7 +28,7 @@ const LandingPage = () => {
       <audio id="ascent-audio" src="/musics/Man to the Moon.mp3" loop preload="auto"/>
       <AudioModal/>
       <StartButton/>
-      <div className={styles.range}>
+      <div className={styles.range} id="volumeRange">
         <input
           type="range"
           className={styles.volumeSlider}

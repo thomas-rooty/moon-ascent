@@ -13,10 +13,14 @@ const StartButton = () => {
   useEffect(() => {
     if (startedJourney) {
       console.log('Started Journey')
-      // Add hide class to the start button and remove it from the DOM after .5 second
+      // Add hide class to the start button and volumeSlider and remove them from the DOM after .5 second
       document.getElementsByClassName(styles.start)[0].classList.add(styles.hide)
+      // @ts-ignore
+      document.getElementById('volumeRange').classList.add(styles.hide)
       setTimeout(() => {
         document.getElementsByClassName(styles.start)[0].remove()
+        // @ts-ignore
+        document.getElementById('volumeRange').remove()
       }, 1000)
 
       // Music handler

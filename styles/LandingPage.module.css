@@ -12,6 +12,7 @@
   bottom: 120px;
   left: -80px;
   transform: rotate(-90deg);
+  transition: 1s;
 }
 
 .range input{
